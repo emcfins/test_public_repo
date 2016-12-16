@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:PutImage",
+                "ecr:InitiateLayerUpload",
+                "ecr:UploadLayerPart",
+                "ecr:CompleteLayerUpload"
+            ],
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::423786275406:role/solano-ci-role"
+            },
+            "Sid": "allow-solano-role"
+        }
+    ],
+    "Version": "2008-10-17"
+}
